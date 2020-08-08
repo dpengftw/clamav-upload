@@ -24,4 +24,3 @@ docker build -t clamavupload .
 | dest_url | Entire URL of repository where definition files are uploaded |
 | username | Username to auth to repository |
 | password | Password for said user |
-
