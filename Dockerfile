@@ -10,6 +10,6 @@ RUN apk update && apk upgrade &&\
         bash
 
 ADD upload.sh /upload.sh
-RUN chmod u+x /upload.sh
+RUN chmod a+x /upload.sh
 
 RUN /usr/bin/freshclam --quiet --on-update-execute=/upload.sh $dest_url $username $password > /etc/periodic/daily/clamavupload
