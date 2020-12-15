@@ -105,10 +105,10 @@ assign_positional_args 1 "${_positionals[@]}"
 
 cd /var/lib/clamav
 
-for i in bytecode.cvd daily.cvd main.cvd whitelist.ign2
+for i in bytecode.cvd daily.* main.cvd whitelist.ign2
 do
     # test if file exists
-    test -f $i && curl -sfT $i -u $_arg_username:$_arg_password -X PUT $_arg_dest_url
+    test -f $i && curl -sf $i -u $_arg_username:$_arg_password -X PUT -T $_arg_dest_url
 done
 
 # ] <-- needed because of Argbash
