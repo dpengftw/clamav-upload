@@ -4,7 +4,7 @@ Uploads clam definitions to a given repository on a daily basis
 ## Quick Start
 
 ```bash
-docker run -it -e dest_url=<repository url> -e username=<user id> -e password=<api key> jedioncrk/clamav-upload:latest
+docker run -e dest_url=<repository url> -e username=<user id> -e password=<api key> jedioncrk/clamav-upload:latest
 ```
 
 ## Build Docker Image
