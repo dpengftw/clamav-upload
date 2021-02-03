@@ -12,4 +12,4 @@ RUN apk update && apk upgrade &&\
 ADD upload.sh /upload.sh
 RUN chmod a+x /upload.sh
 
-RUN /usr/bin/freshclam --log=/dev/stdout --on-update-execute="/upload.sh $dest_url $username $password"
+RUN /usr/bin/freshclam --on-update-execute="/upload.sh $dest_url $username $password"
